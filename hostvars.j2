@@ -1,0 +1,4 @@
+# Variables for {{ item }}
+{% for key, value in hostvars[item].items() %}
+{{ key }}: {{ value | to_nice_yaml }}
+{% endfor %}

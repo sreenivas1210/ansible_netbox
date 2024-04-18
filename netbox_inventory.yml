@@ -1,0 +1,15 @@
+---
+plugin: netbox.netbox.nb_inventory
+validate_certs: false
+config_context: false
+api_endpoint: http://nareshp.tech:8000
+token: '5d0f83d358252d59362211f9a98cc549f23e571f'
+group_by:
+ - device_roles
+ - platforms
+ - cluster
+compose:
+ ansible_network_os: platform.slug
+ ansible_connection: custom_fields.ansible_connection
+device_query_filters:
+ - status: 'active'
