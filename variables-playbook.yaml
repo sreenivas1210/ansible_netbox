@@ -1,0 +1,21 @@
+---
+- name: Create host variable files
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - name: Read YAML inventory file
+      include_vars:
+        file: "inventory.yaml"
+      tags: read_inventory
+
+    - name: Create hostvars directory if not exists
+      file:
+        path: hostvars
+        state: directory
+
+    - name: Generate host variable files
+      template:
+        src: hostvars.j2
+        dest: "hostvars/{{ item }}.yml"
+      loop: "{{ groups['all'] }}"

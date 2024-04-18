@@ -1,0 +1,115 @@
+# Variables for redhat-R01
+inventory_file: /home/naresh/netbox/netbox_inventory.yml
+
+inventory_dir: /home/naresh/netbox
+
+status: label: Active
+value: active
+
+local_context_data: - null
+
+custom_fields: {}
+
+regions: []
+
+is_virtual: true
+
+serial: ''
+
+sites: - redhat-com
+
+tags: []
+
+device_roles: - network-devices
+
+device_types: - ex200
+
+manufacturers: - cisco
+
+site_groups: []
+
+locations: []
+
+services: []
+
+disk: 250
+
+memory: 32
+
+vcpus: 4.0
+
+cluster: redhat-cluster
+
+cluster_type: redhat-type-cluster
+
+inventory_hostname: redhat-R01
+
+inventory_hostname_short: redhat-R01
+
+group_names: - cluster_redhat-cluster
+- device_roles_network-devices
+
+ansible_facts: {}
+
+playbook_dir: /home/naresh/netbox
+
+ansible_playbook_python: /usr/bin/python3
+
+ansible_config_file: /home/naresh/netbox/ansible.cfg
+
+groups: all:
+- R01
+- R02
+- R03
+- redhat-R01
+- redhat-R02
+- sample-R01
+- sample-R02
+- demo-vm1
+- demo-vm2
+cluster_redhat-cluster:
+- redhat-R01
+- redhat-R02
+cluster_sample-cluster:
+- R01
+- R02
+- R03
+- sample-R01
+- sample-R02
+- demo-vm1
+- demo-vm2
+device_roles_network-devices:
+- R01
+- R02
+- R03
+- redhat-R01
+- redhat-R02
+- sample-R01
+- sample-R02
+device_roles_testing-role:
+- demo-vm1
+- demo-vm2
+ungrouped: []
+
+omit: __omit_place_holder__9767edda50394aa6c37d933c3176d82fa595be38
+
+ansible_version: full: 2.15.10
+major: 2
+minor: 15
+revision: 10
+string: 2.15.10
+
+ansible_check_mode: false
+
+ansible_diff_mode: false
+
+ansible_forks: 5
+
+ansible_inventory_sources: - /home/naresh/netbox/netbox_inventory.yml
+
+ansible_skip_tags: []
+
+ansible_run_tags: - all
+
+ansible_verbosity: 1
+

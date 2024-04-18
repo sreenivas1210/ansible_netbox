@@ -1,0 +1,237 @@
+all:
+  children:
+    cluster_redhat-cluster:
+      hosts:
+        redhat-R01: {}
+        redhat-R02: {}
+    cluster_sample-cluster:
+      hosts:
+        R01: {}
+        R02: {}
+        R03: {}
+        demo-vm1:
+          cluster: sample-cluster
+          cluster_type: ansible-cluster
+          custom_fields: {}
+          device_roles:
+          - testing-role
+          disk: 120
+          is_virtual: true
+          local_context_data:
+          - null
+          locations: []
+          memory: 16
+          regions: []
+          services: []
+          site_groups: []
+          sites:
+          - example-com
+          status:
+            label: Active
+            value: active
+          tags: []
+          vcpus: 4.0
+        demo-vm2:
+          cluster: sample-cluster
+          cluster_type: ansible-cluster
+          custom_fields: {}
+          device_roles:
+          - testing-role
+          disk: 250
+          is_virtual: true
+          local_context_data:
+          - null
+          locations: []
+          memory: 32
+          regions: []
+          services: []
+          site_groups: []
+          sites:
+          - example-com
+          status:
+            label: Active
+            value: active
+          tags: []
+          vcpus: 8.0
+        sample-R01: {}
+        sample-R02: {}
+    device_roles_network-devices:
+      hosts:
+        R01:
+          cluster: sample-cluster
+          cluster_type: ansible-cluster
+          custom_fields: {}
+          device_roles:
+          - network-devices
+          device_types:
+          - ex200
+          is_virtual: false
+          local_context_data:
+          - null
+          locations: []
+          manufacturers:
+          - cisco
+          regions: []
+          serial: ''
+          services: []
+          site_groups: []
+          sites:
+          - example-com
+          status:
+            label: Active
+            value: active
+          tags: []
+        R02:
+          cluster: sample-cluster
+          cluster_type: ansible-cluster
+          custom_fields: {}
+          device_roles:
+          - network-devices
+          device_types:
+          - ex200
+          is_virtual: false
+          local_context_data:
+          - null
+          locations: []
+          manufacturers:
+          - cisco
+          regions: []
+          serial: ''
+          services: []
+          site_groups: []
+          sites:
+          - example-com
+          status:
+            label: Active
+            value: active
+          tags: []
+        R03:
+          cluster: sample-cluster
+          cluster_type: ansible-cluster
+          custom_fields: {}
+          device_roles:
+          - network-devices
+          device_types:
+          - ex200
+          is_virtual: false
+          local_context_data:
+          - null
+          locations: []
+          manufacturers:
+          - cisco
+          regions: []
+          serial: ''
+          services: []
+          site_groups: []
+          sites:
+          - example-com
+          status:
+            label: Active
+            value: active
+          tags: []
+        redhat-R01:
+          cluster: redhat-cluster
+          cluster_type: redhat-type-cluster
+          custom_fields: {}
+          device_roles:
+          - network-devices
+          device_types:
+          - ex200
+          disk: 250
+          is_virtual: true
+          local_context_data:
+          - null
+          locations: []
+          manufacturers:
+          - cisco
+          memory: 32
+          regions: []
+          serial: ''
+          services: []
+          site_groups: []
+          sites:
+          - redhat-com
+          status:
+            label: Active
+            value: active
+          tags: []
+          vcpus: 4.0
+        redhat-R02:
+          cluster: redhat-cluster
+          cluster_type: redhat-type-cluster
+          custom_fields: {}
+          device_roles:
+          - network-devices
+          device_types:
+          - ex200
+          disk: 250
+          is_virtual: true
+          local_context_data:
+          - null
+          locations: []
+          manufacturers:
+          - cisco
+          memory: 32
+          regions: []
+          serial: ''
+          services: []
+          site_groups: []
+          sites:
+          - redhat-com
+          status:
+            label: Active
+            value: active
+          tags: []
+          vcpus: 4.0
+        sample-R01:
+          cluster: sample-cluster
+          cluster_type: ansible-cluster
+          custom_fields: {}
+          device_roles:
+          - network-devices
+          device_types:
+          - ex200
+          is_virtual: false
+          local_context_data:
+          - null
+          locations: []
+          manufacturers:
+          - cisco
+          regions: []
+          serial: ''
+          services: []
+          site_groups: []
+          sites:
+          - example-com
+          status:
+            label: Active
+            value: active
+          tags: []
+        sample-R02:
+          cluster: sample-cluster
+          cluster_type: ansible-cluster
+          custom_fields: {}
+          device_roles:
+          - network-devices
+          device_types:
+          - ex200
+          is_virtual: false
+          local_context_data:
+          - null
+          locations: []
+          manufacturers:
+          - cisco
+          regions: []
+          serial: ''
+          services: []
+          site_groups: []
+          sites:
+          - example-com
+          status:
+            label: Active
+            value: active
+          tags: []
+    device_roles_testing-role:
+      hosts:
+        demo-vm1: {}
+        demo-vm2: {}
